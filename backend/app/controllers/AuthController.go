@@ -108,6 +108,7 @@ func (ac *AuthController) SendCode(c *gin.Context) {
 		response.ValidateFrom(c, request.GetErrorMsg(&form, err))
 		return
 	}
+	fmt.Println(form)
 	as := new(services.AuthService)
 	score, _ := as.IsRegByEmail(form.Email)
 	regUid := int64(score)
@@ -182,4 +183,8 @@ func (uc *AuthController) Repass(c *gin.Context) {
 		return
 	}
 	response.Success(c, response.RepassSuccess, isrepass)
+}
+
+func (ac *AuthController) Print(c *gin.Context) {
+	response.Success(c, "hello", nil)
 }

@@ -16,7 +16,7 @@ const endLoading = () => {
 }
 
 const router = useRouter()
-axios.defaults.baseURL = 'http://api.animeii.tech';
+axios.defaults.baseURL = 'https://api.animeii.tech';
 axios.defaults.headers.common["Content-Type"] = "application/json;charset=utf-8"
 axios.interceptors.request.use((config) => {
     startLoading()

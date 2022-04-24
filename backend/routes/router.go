@@ -22,6 +22,7 @@ func InitRouter(app *gin.Engine) {
 	auth.POST("/login", controllers.AC.Login)
 	auth.POST("/sendCode", controllers.AC.SendCode)
 	auth.POST("/repass", controllers.AC.Repass)
+	auth.POST("/print", controllers.AC.Print)
 
 	// auth := api.Group("/auth").Use(middleware.Cors(), middleware.JWTAuth(services.AppGuardName)) // iroutes
 
