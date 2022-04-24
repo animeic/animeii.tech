@@ -1,1 +1,0 @@
-import{e as r,r as e,o as n,c,w as t,f as a,g as _}from"./vendor.fbca048a.js";const p=_("\u4E3B\u9898\u989C\u8272"),i={props:{msg:String},setup(u){return r(0),(l,m)=>{const o=e("el-button"),s=e("router-link");return n(),c(s,{to:"/dev/theme"},{default:t(()=>[a(o,{type:"success",size:"medium"},{default:t(()=>[p]),_:1})]),_:1})}}};export{i as default};

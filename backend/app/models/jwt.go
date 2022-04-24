@@ -1,4 +1,4 @@
-package config
+package models
 
 type Jwt struct {
 	Secret                  string `mapstructure:"secret" json:"secret" yaml:"secret"`

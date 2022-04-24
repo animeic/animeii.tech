@@ -1,4 +1,4 @@
-package config
+package models
 
 type Redis struct {
 	Host     string `mapstructure:"host" json:"host" yaml:"host"`

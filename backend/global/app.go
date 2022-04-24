@@ -1,7 +1,7 @@
 package global
 
 import (
-	"animeic-gin/global/config"
+	"animeic-gin/app/models"
 
 	"github.com/go-redis/redis/v8"
 	"github.com/spf13/viper"
@@ -11,7 +11,7 @@ import (
 
 type Application struct {
 	ConfigViper *viper.Viper
-	Config      config.Configuration
+	Config      models.Config
 	Log         *zap.Logger
 	DB          *gorm.DB
 	Redis       *redis.Client

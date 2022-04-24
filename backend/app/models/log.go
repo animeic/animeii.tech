@@ -1,4 +1,4 @@
-package config
+package models
 
 type Log struct {
 	Level      string `mapstructure:"level" json:"level" yaml:"level"`

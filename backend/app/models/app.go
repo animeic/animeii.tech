@@ -1,4 +1,4 @@
-package config
+package models
 
 type App struct {
 	Env     string `mapstructure:"env" json:"env" yaml:"env"`
