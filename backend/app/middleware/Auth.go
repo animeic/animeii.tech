@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"animeic-gin/app/common/response"
+	"animeic-gin/app/response"
 	"animeic-gin/app/services"
 	"animeic-gin/global"
 	"log"

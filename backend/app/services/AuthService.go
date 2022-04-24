@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"animeic-gin/app/common/request"
+	"animeic-gin/app/request"
 	"animeic-gin/global"
 	"animeic-gin/utils"
 

@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"animeic-gin/app/common/request"
-	"animeic-gin/app/common/response"
 	"animeic-gin/app/models"
+	"animeic-gin/app/request"
+	"animeic-gin/app/response"
 	"animeic-gin/app/services"
 
 	"github.com/gin-gonic/gin"

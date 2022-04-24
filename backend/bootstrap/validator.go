@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-	"animeic-gin/utils"
+	"animeic-gin/app/request"
 	"reflect"
 	"strings"
 
@@ -10,12 +10,13 @@ import (
 )
 
 func InitValidator() {
+	request
 	// 自定义验证器
 	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
-		_ = v.RegisterValidation("mobile", utils.ValidateMobile)
-		_ = v.RegisterValidation("email", utils.ValidateEmail)
-		_ = v.RegisterValidation("username", utils.ValidateUserName)
-		_ = v.RegisterValidation("password", utils.ValidatePassword)
+		_ = v.RegisterValidation("mobile", request.ValidateMobile)
+		_ = v.RegisterValidation("email", request.ValidateEmail)
+		_ = v.RegisterValidation("username", request.ValidateUserName)
+		_ = v.RegisterValidation("password", request.ValidatePassword)
 
 		// 注册自定义json tag函数
 		v.RegisterTagNameFunc(func(field reflect.StructField) string {

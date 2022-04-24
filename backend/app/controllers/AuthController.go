@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"animeic-gin/app/common/request"
-	"animeic-gin/app/common/response"
+	"animeic-gin/app/request"
+	"animeic-gin/app/response"
 	"animeic-gin/app/services"
 	"animeic-gin/utils"
 	"fmt"
