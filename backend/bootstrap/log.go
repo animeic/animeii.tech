@@ -12,8 +12,8 @@ import (
 )
 
 var (
-	level   zapcore.Level
-	options []zap.Option
+	level zapcore.Level
+	opts  []zap.Option
 )
 
 func InitLog() {
@@ -22,9 +22,9 @@ func InitLog() {
 	// 设置日志等级
 	setLogLevel()
 	if global.App.Config.Log.ShowLine {
-		options = append(options, zap.AddCaller())
+		opts = append(opts, zap.AddCaller())
 	}
-	global.App.Log = zap.New(getZapCore(), options...)
+	global.App.Log = zap.New(getZapCore(), opts...)
 
 }
 
@@ -40,14 +40,14 @@ func setLogLevel() {
 	switch global.App.Config.Log.Level {
 	case "debug":
 		level = zap.DebugLevel
-		options = append(options, zap.AddStacktrace(level))
+		opts = append(opts, zap.AddStacktrace(level))
 	case "info":
 		level = zap.InfoLevel
 	case "warn":
 		level = zap.WarnLevel
 	case "error":
 		level = zap.ErrorLevel
-		options = append(options, zap.AddStacktrace(level))
+		opts = append(opts, zap.AddStacktrace(level))
 	case "dpanic":
 		level = zap.DPanicLevel
 	case "panic":

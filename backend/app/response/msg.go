@@ -7,6 +7,7 @@ type AnErr struct {
 
 var (
 	ValdateFormErrCode int    = 1001
+	WebSocketCode      int    = 1002
 	RegisterSuccess    string = "注册成功！"
 	SendEmailSuccess   string = "验证码发送成功！"
 	GetUserInfoSuccess string = "获取用户信息成功！"

@@ -2,7 +2,7 @@ app:
   env: local
   mode: debug
   port: 8000
-  app_name: animeii.tech
+  app_name: exeample
   app_url: 127.0.0.1
 log:
   level: info # 日志等级
@@ -19,9 +19,9 @@ database:
   driver: mysql # 数据库驱动
   host: localhost # 域名
   port: 3306 # 端口号
-  database: eiko # 数据库名称
-  username: myremote # 用户名
-  password: ssxhyw2515 # 密码
+  database:  # 数据库名称
+  username:  # 用户名
+  password:  # 密码
   charset: utf8mb4 # 编码格式
   max_idle_conns: 10 # 空闲连接池中连接的最大数量
   max_open_conns: 100 # 打开数据库连接的最大数量
@@ -30,7 +30,7 @@ database:
   log_filename: sql.log # 日志文件名称
 
 jwt:
-  secret: 3Bde3BGEbYqtqyEUzW3ry8jKFcaPH17fRmTmqE7MDr05Lwj95uruRKrrkb44TJ4s
+  secret: 3Bde3BGEbYqtqyEUzW3ry8jKFcaPH17fRm4s
   jwt_ttl: 43200
   jwt_blacklist_grace_period: 10
   refresh_grace_period: 1800

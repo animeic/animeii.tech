@@ -4,6 +4,7 @@ import (
 	"animeic-gin/app/controllers"
 	"animeic-gin/app/middleware"
 	"animeic-gin/app/services"
+	"animeic-gin/app/ws"
 
 	"github.com/gin-gonic/gin"
 )
@@ -23,6 +24,8 @@ func InitRouter(app *gin.Engine) {
 	auth.POST("/sendCode", controllers.AC.SendCode)
 	auth.POST("/repass", controllers.AC.Repass)
 	auth.POST("/print", controllers.AC.Print)
+
+	app.GET("/ws", ws.Handler)
 
 	// auth := api.Group("/auth").Use(middleware.Cors(), middleware.JWTAuth(services.AppGuardName)) // iroutes
 

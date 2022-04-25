@@ -1,6 +1,7 @@
 package bootstrap
 
 import (
+	"animeic-gin/app/ws"
 	"animeic-gin/global"
 	"animeic-gin/routes"
 	"fmt"
@@ -17,6 +18,7 @@ func InitGin() {
 	routes.InitRouter(app)
 	gin.SetMode(global.App.Config.App.Mode)
 	handleSignal(app)
+	go ws.Manager.Start()
 	app.Run(fmt.Sprintf("%s:%s", global.App.Config.App.AppUrl, global.App.Config.App.Port))
 
 	// go1.8版本关闭服务
